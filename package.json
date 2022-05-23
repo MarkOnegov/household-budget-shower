@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@shower/core": "^3.3.0",
-    "@shower/ribbon": "^3.5.0",
-    "material-icons": "^1.10.11"
+    "@shower/ribbon": "^3.5.0"
   }
 }
