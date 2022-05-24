@@ -18,6 +18,21 @@
         height: 35px;
         width: 35px;
       }
+      .pdf .with-image img {
+        display: none;
+      }
+      .pdf .emoji {
+        display: none;
+      }
+      .pdf a {
+        background: none !important;
+        color: #000 !important;
+      }
+      .pdf .slide::after {
+        background-color: #3d3d3d;
+        background-image: none;
+        -webkit-mask-image: url("node_modules/@shower/ribbon/styles/slide/ribbon.svg");
+      }
     </style>
   </head>
   <body class="shower list">
@@ -27,7 +42,7 @@
 
     <section class="slide" id="cover">
       <h2>Обследование бюджетов домашних хозяйств</h2>
-      <figure>
+      <figure id="cover-image">
         <picture>
           <source srcset="images/cover-4k.webp" type="image/webp" />
           <img class="cover" src="images/cover-4k.jpg" alt="Домохозяйство" />
@@ -37,38 +52,65 @@
         #cover h2 {
           color: #fff;
         }
+        .pdf #cover h2 {
+          color: #000;
+        }
+        .pdf #cover-image {
+          display: none;
+        }
       </style>
     </section>
 
     <section class="slide">
-      <h1>Задачи: 📑</h1>
+      <h1>Задачи: <span class="emoji">📑</span></h1>
       <ul>
-        <li class="next">Ознакомиться с документами об ОБДХ 🧾</li>
-        <li class="next">Выбрать способ реализации 💭</li>
-        <li class="next">Реализовать опрос 💻</li>
+        <li class="next">
+          Ознакомиться с документами об ОБДХ <span class="emoji">🧾</span>
+        </li>
+        <li class="next">
+          Выбрать способ реализации <span class="emoji">💭</span>
+        </li>
+        <li class="next">Реализовать опрос <span class="emoji">💻</span></li>
       </ul>
     </section>
 
     <section class="slide" id="reference-sheet">
-      <h1>Опорный лист 🧾</h1>
+      <h1>Опросный лист <span class="emoji">🧾</span></h1>
       <ol>
-        <li class="next">Состав домохозяйства 👨‍👩‍👧‍👦</li>
-        <li class="next">Пенсионное обеспечение и социальная поддержка 📄</li>
-        <li class="next">Доходы домохозяйства 💰</li>
-        <li class="next">Расходы домохозяйства 💸</li>
-        <li class="next">Расходы на основное жильё и другую недвижимость 🏠</li>
-        <li class="next">Самостоятельная деятельность 🧶</li>
+        <li class="next">Состав домохозяйства <span class="emoji">👨‍👩‍👧‍👦</span></li>
+        <li class="next">
+          Пенсионное обеспечение и социальная поддержка
+          <span class="emoji">📄</span>
+        </li>
+        <li class="next">Доходы домохозяйства <span class="emoji">💰</span></li>
+        <li class="next">
+          Расходы домохозяйства <span class="emoji">💸</span>
+        </li>
+        <li class="next">
+          Расходы на основное жильё и другую недвижимость
+          <span class="emoji">🏠</span>
+        </li>
+        <li class="next">
+          Самостоятельная деятельность <span class="emoji">🧶</span>
+        </li>
       </ol>
     </section>
 
     <section class="slide" id="reference-sheet-2">
-      <h1>Опорный лист 🧾</h1>
+      <h1>Опросный лист <span class="emoji">🧾</span></h1>
       <ol>
-        <li>Расходы в поездках ⛰️</li>
-        <li class="next">Финансовые обязательства и самооценка 📈</li>
-        <li class="next">Наличие предметов длительного пользования 📋</li>
-        <li class="next">Запасы продуктов питания 🍪</li>
-        <li class="next">Карточка интервьюера 🗒️</li>
+        <li>Расходы в поездках <span class="emoji">⛰️</span></li>
+        <li class="next">
+          Финансовые обязательства и самооценка <span class="emoji">📈</span>
+        </li>
+        <li class="next">
+          Наличие предметов длительного пользования
+          <span class="emoji">📋</span>
+        </li>
+        <li class="next">
+          Запасы продуктов питания <span class="emoji">🍪</span>
+        </li>
+        <li class="next">Карточка интервьюера <span class="emoji">🗒️</span></li>
       </ol>
       <style>
         #reference-sheet-2 ol > li:first-of-type:before {
@@ -78,8 +120,10 @@
     </section>
 
     <section class="slide" id="front-end">
-      <h1>Реализация 💻</h1>
-      <h3 class="next">Браузерная сторона (front-end) 🌍</h3>
+      <h1>Реализация <span class="emoji">💻</span></h1>
+      <h3 class="next">
+        Браузерная сторона (front-end) <span class="emoji">🌍</span>
+      </h3>
       <span class="next with-image">
         <strong>Фреймворк:</strong>
         &nbsp;
@@ -105,8 +149,8 @@
     </section>
 
     <section class="slide" id="back-end">
-      <h1>Реализация 💻</h1>
-      <h3>Серверная сторона (back-end) 🪆</h3>
+      <h1>Реализация <span class="emoji">💻</span></h1>
+      <h3>Серверная сторона (back-end) <span class="emoji">🪆</span></h3>
       <span class="next with-image">
         <strong>Фреймворк:</strong>
         &nbsp;
@@ -131,89 +175,8 @@
       </span>
     </section>
 
-    <section class="slide">
-      <h1>Подробнее об использованных технологиях</h1>
-      <p><a href="#technologist">Узнать подробнее</a> 🔮</p>
-      <p><a href="#end">Скучно, заканчиваем</a> 🥱</p>
-    </section>
-
-    <section class="slide" id="technologist">
-      <h1>Используемые технологии</h1>
-      <span class="with-image">
-        <a
-          href="https://www.typescriptlang.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Typescript
-        </a>
-        &nbsp;
-        <img src="icons/typescript.svg" alt="Typescript" />
-      </span>
-      <p class="next">
-        <img src="images/ts.png" alt="Typescript code" />
-        <img src="images/js.png" alt="Javascript code" />
-      </p>
-    </section>
-
-    <section class="slide">
-      <h1>Используемые технологии</h1>
-      <span class="with-image">
-        <a href="https://angular.io/" target="_blank" rel="noopener noreferrer">
-          Angular
-        </a>
-        &nbsp;
-        <img src="icons/angular.svg" alt="Angular" />
-        &nbsp;и&nbsp;
-        <a href="https://nestjs.com/" target="_blank" rel="noopener noreferrer">
-          Nest
-        </a>
-        &nbsp;
-        <img src="icons/nest.svg" alt="Nest" />
-      </span>
-      <p class="next">
-        <img id="angular-code" src="images/angular.png" alt="Angular code" />
-        <img src="images/nest.png" alt="Nest code" />
-      </p>
-      <style>
-        #angular-code {
-          position: absolute;
-          top: 130px;
-          left: 550px;
-        }
-      </style>
-    </section>
-
-    <section class="slide">
-      <h1>Используемые технологии</h1>
-      <span class="with-image">
-        <a
-          href="https://couchdb.apache.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CouchDB
-        </a>
-        &nbsp;
-        <img src="icons/couchdb.svg" alt="CouchDB" />
-      </span>
-      <p class="next" id="couch-logo">
-        <img src="icons/couchdb.png" alt="CouchDB" />
-      </p>
-      <style>
-        #couch-logo {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        #couch-logo img {
-          height: 240px;
-        }
-      </style>
-    </section>
-
     <section class="slide" id="end">
-      <h2 class="shout">Спасибо за внимание 🎉</h2>
+      <h2 class="shout">Спасибо за внимание <span class="emoji">🎉</span></h2>
     </section>
 
     <footer class="badge">
